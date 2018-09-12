@@ -14,10 +14,10 @@ public class CloneableDemo implements Cloneable{
     }
 
     @Override
-    public CloneableDemo clone(){
-        CloneableDemo cloneableDemo = null;
+    public Object clone(){
+        Object cloneableDemo = null;
         try{
-            cloneableDemo = (CloneableDemo) super.clone();
+            cloneableDemo = super.clone();
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
@@ -35,7 +35,7 @@ public class CloneableDemo implements Cloneable{
     public static void main(String[] args){
         CloneableDemo demo = new CloneableDemo(10);
         CloneableDemo demo1 = demo;
-        CloneableDemo demo2 = demo.clone();
+        CloneableDemo demo2 = (CloneableDemo) demo.clone();
         System.out.println(demo == demo1);
         System.out.println(demo == demo2);
     }
