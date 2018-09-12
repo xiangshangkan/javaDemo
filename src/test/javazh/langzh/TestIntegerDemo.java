@@ -3,6 +3,9 @@ package test.javazh.langzh;
 import javazh.langzh.IntegerDemo;
 import org.junit.*;
 
+/**
+ * Created by Administrator on 2018/9/11.
+ */
 public class TestIntegerDemo {
 
     private IntegerDemo integerDemo = new IntegerDemo();
@@ -31,6 +34,4 @@ public class TestIntegerDemo {
     public void testIntegerDemo1(){
         this.integerDemo.IntegerDemo1();
     }
-
-
 }
