@@ -22,7 +22,6 @@ public class DCLSingletonPattern {
             if(null == instance){
                 instance = new DCLSingletonPattern() ;
             }
-
         }
         return instance;
     }
