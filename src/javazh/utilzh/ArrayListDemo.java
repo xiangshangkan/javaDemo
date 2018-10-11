@@ -1,6 +1,7 @@
 package javazh.utilzh;
 
 import org.omg.CORBA.PUBLIC_MEMBER;
+import org.omg.CORBA.UserException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,5 +37,29 @@ public class ArrayListDemo {
             abc.add(i+"1");
         }
         System.out.println(abc.subList(0,4));
+    }
+
+    /**
+     * ArrayList通过引用添加成员
+     */
+    public void arrayListDemo4(){
+        List<User> userList = new ArrayList<>();
+        User user = new User();
+        user.setNaem("哈哈");
+        userList.add(user);
+        user.setNaem("嘿嘿");
+        System.out.println(userList.get(0).getNaem() + user.getNaem());
+    }
+}
+
+class User{
+    private String naem;
+
+    public String getNaem() {
+        return naem;
+    }
+
+    public void setNaem(String naem) {
+        this.naem = naem;
     }
 }
