@@ -6,10 +6,13 @@ public class IntegerDemo {
     public void IntegerDemo1() {
         Integer a = 1;
         Integer b = 1;
+        int z = 9;
         System.out.println(a == b);
         Integer c = 129;
         Integer d = 129;
         System.out.println(c == d);
         System.out.println(c.equals(d));
+
+        System.out.println(c.equals(129));
     }
 }
