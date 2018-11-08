@@ -1,6 +1,5 @@
 package designPattern.StructurePattern.bridgePattern;
 
-import sun.security.provider.SHA;
 
 /**
  * @Description:
