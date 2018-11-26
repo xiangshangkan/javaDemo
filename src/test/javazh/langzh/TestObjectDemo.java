@@ -15,4 +15,9 @@ public class TestObjectDemo {
     public void testObjectDemo1(){
         this.objectDemo.ObjectDemo1();
     }
+
+    @Test
+    public void testObjectDemo2(){
+        this.objectDemo.ObjectDemo2();
+    }
 }

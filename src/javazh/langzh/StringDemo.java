@@ -6,6 +6,18 @@ package javazh.langzh;
  */
 public class StringDemo {
 
+
+    public static void main(String[] args){
+        String str = null;
+        boolean some = true;
+
+
+        System.out.println(some+""+"hjhj"+str);
+    }
+
+
+
+
     public void StringDemo1(){
         String id = "/0100001/0200003/0200009/";
         String idPath = "/0100001/0200003/0200009/0208144/3300078/0001596/3300200/5502153";
@@ -20,5 +32,8 @@ public class StringDemo {
         System.out.println(String.valueOf(133));
 
 
+
+
     }
+
 }
