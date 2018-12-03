@@ -19,7 +19,7 @@ public class ImportOrExportXlsTest {
 
     @Test
     public void importTest(){
-        String path = "C:\\Users\\zh\\Desktop\\测试.xls";
+        String path = "C:\\Users\\Administrator\\Desktop\\yin.xls";
         try {
             InputStream is = new FileInputStream(path);
             HSSFWorkbook hwk = new HSSFWorkbook(is);

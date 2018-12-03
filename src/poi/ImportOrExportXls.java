@@ -25,23 +25,27 @@ public class ImportOrExportXls {
        CellRangeAddress cellRangeAddress = sheet.getMergedRegion(0);
        //总行数
        int count = sheet.getLastRowNum() + 1; //总行数
+        System.out.println("数据总行数:" + count);
        for(int i= 1; i < count; i++){
           //获取某一行
           Row row = sheet.getRow(i);
           System.out.print(getCellValue(row.getCell(0)));
           System.out.print(getCellValue(row.getCell(1)));
-          System.out.print(getCellValue(row.getCell(2)));
-          if(isMergedRegion(sheet,i,3)){
+         /* System.out.print(getCellValue(row.getCell(2)));*/
+          if(isMergedRegion(sheet,i,0)){
               int lastRow = getRowNum(sheet,row.getCell(0)).get("lastRow");
-              for(; i < lastRow; i++){
-                  System.out.print(getCellValue(row.getCell(3)));
-                  System.out.print(getCellValue(row.getCell(4)));
-                  System.out.println(getCellValue(row.getCell(5)));
+              System.out.println("最后一行索引" + lastRow);
+              for(; i < lastRow + 1; i++){
+                  Row row1 = sheet.getRow(i);
+                  System.out.print(getCellValue(row1.getCell(2)));
+                  System.out.print(getCellValue(row1.getCell(3)));
+                 /* System.out.println(getCellValue(row1.getCell(5)));*/
               }
+              i--;
           } else {
+              System.out.print(getCellValue(row.getCell(2)));
               System.out.print(getCellValue(row.getCell(3)));
-              System.out.print(getCellValue(row.getCell(4)));
-              System.out.print(getCellValue(row.getCell(5)));
+              /*System.out.print(getCellValue(row.getCell(5)));*/
           }
        }
     }
