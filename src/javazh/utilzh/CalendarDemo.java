@@ -19,5 +19,6 @@ public class CalendarDemo {
         //将Calendar的月前推8个月
         c.add(Calendar.MONTH,-8);
         System.out.println("前推8个月的时间"+c.getTime());
+
     }
 }
