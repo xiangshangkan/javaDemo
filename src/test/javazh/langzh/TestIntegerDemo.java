@@ -30,8 +30,5 @@ public class TestIntegerDemo {
         System.out.println("一个测试结束");
     }
 
-    @Test
-    public void testIntegerDemo1(){
-        this.integerDemo.IntegerDemo1();
-    }
+
 }
