@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>groupId</groupId>
+    <artifactId>javaDemo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <junit.version>4.12</junit.version>
+        <fastjson.version>1.2.6</fastjson.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <!-- 依赖范围 ：定义项目哪个生命周期中需要被依赖-->
+            <!--compile(默认，编译、测试、运行时被需要) provided(编译和测试需要) runtime(运行和测试时被需要)   -->
+            <!-- test(编译测试和编译运行时被需要)  system -->
+            <scope>test</scope>
+            <!-- 设置依赖是否可选：true/false默认是后者-->
+            <!--<optional>false</optional>-->
+            <!-- 排除依赖传递列表,排除部分不需要的依赖(具体就是类名) -->
+            <!--<exclusions>
+              <exclusion></exclusion>
+            </exclusions>-->
+        </dependency>
+        <!-- POI start -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>3.17</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.17</version>
+        </dependency>
+        <!-- fastJson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+    </dependencies>
+
+
+
+    
+</project>

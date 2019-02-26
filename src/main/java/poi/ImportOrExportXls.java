@@ -103,7 +103,7 @@ public class ImportOrExportXls {
      * @return
      */
     private Map<String,Integer> getRowNum(Sheet sheet, Cell cell ){
-        Map<String,Integer> resultMap = new HashMap<>();
+        Map<String,Integer> resultMap = new HashMap<String, Integer>();
         List<CellRangeAddress> cellRangeAddressList = sheet.getMergedRegions();
        for (CellRangeAddress cellRangeAddress:cellRangeAddressList){
            if (cell.getRowIndex() >= cellRangeAddress.getFirstRow() && cell.getRowIndex() <= cellRangeAddress.getLastRow()){

@@ -12,6 +12,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.*;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -49,7 +50,7 @@ public class ImportExcelUtil {
 
     }
 
-    public static void exportExcel(String title, String[] headers, String[] fields, List<T> datas,String path){
+    public static void exportExcel(String title, String[] headers, String[] fields, List<T> datas){
         //创建新的工作bu
         HSSFWorkbook wk = new HSSFWorkbook();
         //创建新的sheet页
@@ -80,6 +81,15 @@ public class ImportExcelUtil {
         }
         //导出
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String sFileName = title + "_"+ sdf.format(new Date())+".xls";
+        try {
+            OutputStream outputStream = new FileOutputStream(sFileName);
+            wk.write(outputStream);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
        /* try {
             String sFileName = title + "_"+ sdf.format(new Date())+".xls";
             response.setHeader("Content-Disposition", "attachment;filename="
