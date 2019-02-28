@@ -1,6 +1,5 @@
-package test.javazh.langzh;
+package javazh.langzh;
 
-import javazh.langzh.ObjectDemo;
 import org.junit.Test;
 
 /**

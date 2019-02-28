@@ -1,8 +1,6 @@
-package test.javazh.utilzh;
+package javazh.utilzh;
 
 import org.junit.*;
-
-import javazh.utilzh.CalendarDemo;
 
 public class testCalendarDemo {
 

@@ -1,6 +1,5 @@
-package test.javazh.utilzh;
+package javazh.utilzh;
 
-import javazh.utilzh.ArrayListDemo;
 import org.junit.*;
 
 /**

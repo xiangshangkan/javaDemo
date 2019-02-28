@@ -1,15 +1,16 @@
-package test.javazh.mathzh;
+package javazh.langzh;
 
-import javazh.mathzh.BigDecimalDemo;
-import org.junit.*;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
 
 /**
- * @auther: Administrator
- * @date: 2018/10/15 15:50
+ * Created by Administrator on 2018/9/11.
  */
-public class testBigDecimalDemo{
+public class TestIntegerDemo {
 
-    private BigDecimalDemo demo = new BigDecimalDemo();
+    private IntegerDemo integerDemo = new IntegerDemo();
 
     @BeforeClass //注意，这里必须是static ...因为方法将在类被加载的时候就被调用（那时候还没创建实例）
     public static void before(){
@@ -31,8 +32,5 @@ public class testBigDecimalDemo{
         System.out.println("一个测试结束");
     }
 
-    @Test
-    public void testBigDecimalDemo1(){
-        this.demo.bigDecimalDemo1();
-    }
+
 }

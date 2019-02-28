@@ -1,8 +1,5 @@
-package main.java;
-
+import java.math.BigDecimal;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 
 /**
  * @auther: Administrator
@@ -51,14 +48,23 @@ public class SimpleDemo {
         test2.forEach(System.out::println);
         System.out.println(test2.size());*/
 
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        /*SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         Calendar calendar = Calendar.getInstance();
         calendar.add(Calendar.MONTH,0);
         System.out.println(sdf.format(calendar.getTime()));
         calendar.set(Calendar.DAY_OF_MONTH,1);
-        System.out.println(sdf.format(calendar.getTime()));
+        System.out.println(sdf.format(calendar.getTime()));*/
 
 
+        BigDecimal bonuse = new BigDecimal(12321.32);
+        BigDecimal balance = new BigDecimal(12.88);
+        BigDecimal some = new BigDecimal(-2222);
+        BigDecimal total = balance.add(bonuse).subtract(new BigDecimal(30000));
+        System.out.println(total + "嘿嘿" + some);
+        System.out.println("比较大小" + total.compareTo(some));
+
+        System.out.println(total.abs().setScale(2,BigDecimal.ROUND_UP));
+        System.out.println(Double.parseDouble(total.abs().setScale(2,BigDecimal.ROUND_UP).toString()));
 
 
 

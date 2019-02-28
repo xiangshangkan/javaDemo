@@ -1,8 +1,7 @@
-package test.poi;
+package poi;
 
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.junit.Test;
-import poi.ImportOrExportXls;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

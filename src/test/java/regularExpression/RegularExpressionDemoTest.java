@@ -1,14 +1,16 @@
-package test.javazh.langzh;
+package regularExpression;
 
-import javazh.langzh.IntegerDemo;
+import RegularExpression.RegularExpressionDemo;
 import org.junit.*;
 
 /**
- * Created by Administrator on 2018/9/11.
+ * 正则表达式测试
+ * @auther: Administrator
+ * @date: 2018/9/26 14:35
  */
-public class TestIntegerDemo {
+public class RegularExpressionDemoTest {
 
-    private IntegerDemo integerDemo = new IntegerDemo();
+    private RegularExpressionDemo regularExpressionDemo = new RegularExpressionDemo();
 
     @BeforeClass //注意，这里必须是static ...因为方法将在类被加载的时候就被调用（那时候还没创建实例）
     public static void before(){
@@ -30,5 +32,9 @@ public class TestIntegerDemo {
         System.out.println("一个测试结束");
     }
 
+    @Test
+    public void testRegularExpressionDemo1(){
+        regularExpressionDemo.RegularExpressionDemo1();
+    }
 
 }

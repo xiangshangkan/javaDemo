@@ -1,17 +1,14 @@
-package test.javazh.langzh;
+package javazh.langzh;
 
-import javazh.langzh.StringBuilderDemo;
 import org.junit.*;
 
-
 /**
- * @Description:
- * @Auther: Administrator
- * @Date: 2018/9/15 18:02
+ * @auther: Administrator
+ * @date: 2018/9/25 15:20
  */
-public class TestStringBuilderDemo {
+public class TestStringDemo {
 
-    private StringBuilderDemo stringBuilderDemo = new StringBuilderDemo();
+    private StringDemo stringDemo = new StringDemo();
 
     @BeforeClass   //注意：必须是static   因为方法将在类被加载时调用（那时类还没有创建实例）
     public static void before(){System.out.println("global");}
@@ -26,7 +23,7 @@ public class TestStringBuilderDemo {
     public void tearDown(){System.out.println("一个测试结束");}
 
     @Test
-    public void testStringBuilderDemo1(){
-        stringBuilderDemo.StringBuilderDemo1();
+    public void testStringDemo1(){
+        stringDemo.StringDemo1();
     }
 }

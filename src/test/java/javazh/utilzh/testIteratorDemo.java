@@ -1,6 +1,5 @@
-package test.javazh.utilzh;
+package javazh.utilzh;
 
-import javazh.utilzh.IteratorDemo;
 import org.junit.*;
 
 public class testIteratorDemo {

@@ -1,16 +1,14 @@
-package test.regularExpression;
+package javazh.mathzh;
 
-import RegularExpression.RegularExpressionDemo;
 import org.junit.*;
 
 /**
- * 正则表达式测试
  * @auther: Administrator
- * @date: 2018/9/26 14:35
+ * @date: 2018/10/15 15:50
  */
-public class RegularExpressionDemoTest {
+public class testBigDecimalDemo{
 
-    private RegularExpressionDemo regularExpressionDemo = new RegularExpressionDemo();
+    private BigDecimalDemo demo = new BigDecimalDemo();
 
     @BeforeClass //注意，这里必须是static ...因为方法将在类被加载的时候就被调用（那时候还没创建实例）
     public static void before(){
@@ -33,8 +31,7 @@ public class RegularExpressionDemoTest {
     }
 
     @Test
-    public void testRegularExpressionDemo1(){
-        regularExpressionDemo.RegularExpressionDemo1();
+    public void testBigDecimalDemo1(){
+        this.demo.bigDecimalDemo1();
     }
-
 }
