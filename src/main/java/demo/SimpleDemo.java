@@ -1,3 +1,5 @@
+package demo;
+
 import java.math.BigDecimal;
 import java.text.ParseException;
 
@@ -6,6 +8,7 @@ import java.text.ParseException;
  * @date: 2018/12/28 09:39
  */
 public class SimpleDemo {
+
 
     public static void main(String[] args) throws ParseException {
         /*String dateText = "2019-01-14";
@@ -29,11 +32,11 @@ public class SimpleDemo {
         System.out.println("DAY_OF_WEEK_IN_MONTH:" + sdf.format(date));*/
        /*calendar.add(Calendar.MONTH,1);
        date = calendar.getTime();
-       System.out.println(sdf.format(date));*/
-       /*int some = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
-       calendar.set(Calendar.DATE,some);
-       date = calendar.getTime();
-       System.out.println(sdf.format(date));*/
+        System.out.println(sdf.format(date));*/
+        /*int some = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
+        calendar.set(Calendar.DATE,some);
+        date = calendar.getTime();
+        System.out.println(sdf.format(date));*/
 
 
         /*List<String> test1 = new ArrayList<>();

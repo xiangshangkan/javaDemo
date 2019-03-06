@@ -1,4 +1,4 @@
-package main.java.克隆实现.序列化实现克隆;
+package 克隆实现.序列化实现克隆;
 
 import java.io.*;
 
