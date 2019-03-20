@@ -1,7 +1,7 @@
 package demo;
 
-import java.math.BigDecimal;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 /**
  * @auther: Administrator
@@ -11,8 +11,9 @@ public class SimpleDemo {
 
 
     public static void main(String[] args) throws ParseException {
-        /*String dateText = "2019-01-14";
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+
+        /*String dateText = "2019-01-14";
         Date date = sdf.parse(dateText);
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(date);
@@ -58,7 +59,7 @@ public class SimpleDemo {
         calendar.set(Calendar.DAY_OF_MONTH,1);
         System.out.println(sdf.format(calendar.getTime()));*/
 
-
+/*
         BigDecimal bonuse = new BigDecimal(12321.32);
         BigDecimal balance = new BigDecimal(12.88);
         BigDecimal some = new BigDecimal(-2222);
@@ -67,12 +68,73 @@ public class SimpleDemo {
         System.out.println("比较大小" + total.compareTo(some));
 
         System.out.println(total.abs().setScale(2,BigDecimal.ROUND_UP));
-        System.out.println(Double.parseDouble(total.abs().setScale(2,BigDecimal.ROUND_UP).toString()));
+        System.out.println(Double.parseDouble(total.abs().setScale(2,BigDecimal.ROUND_UP).toString()));*/
+
+        /*SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+        SimpleDateFormat fg = new SimpleDateFormat("yyyy-MM-dd");
+        String datetext = "1/1/2019";
+
+        Date date = sdf.parse(datetext);
+
+        System.out.println(fg.format(date));
+*/
+
+        /*String test = "8888,909090";
+        String hj = "1221212";
+        System.out.println(test.split(",").length);
+        System.out.println(hj.split(",").length);*/
+
+        /*Map<String,Object> map = new HashMap<>();
+        System.out.println(map.get("hh"));*/
+       /* System.out.println(map.get("dd").toString());*/
 
 
+      /*  List<String> strList = new ArrayList<>();
+        strList.add("first");
+        strList.add("second");
+        strList.add("third");
+        System.out.println(strList.size());
+        List<String> subList = strList.subList(1,strList.size());
+        System.out.println("------------------------");
+        strList.forEach(model->System.out.println(model));
+        System.out.println("------------------------");
+        subList.forEach(model->System.out.println(model));
+        System.out.println("------------------------");*/
+
+       /* Date date = new Date();
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        calendar.set(Calendar.DAY_OF_MONTH,1);
+        System.out.println(calendar.getTime());*/
+
+       /* Map<String,Object> some = new HashMap<>();
+        some.put("some","hahahhaa");
+        Date date = (Date)some.get("hshshs");
+        System.out.println(date);
+        System.out.println(some.get("some"));*/
+
+
+
+     /*  String start = "2018-06-12";
+
+       String end = "2018-09-12";
+
+        Date startDate = sdf.parse(start);
+
+        Date endDate = sdf.parse(end);
+*/
+
+     /*String some = " / ";
+     String[] a = some.split("/");
+     System.out.println(a.length);*/
+
+    /* String some = "489555.22";
+     System.out.println(Double.valueOf(some) == 489555.22);*/
+
+
+    String some = "67";
+    /*Integer dd = Integer.valueOf(some.substring(0,some.indexOf(".")));*/
+    System.out.println(some.indexOf("."));
 
     }
-
-
-
 }
