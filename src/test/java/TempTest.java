@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -15,7 +16,13 @@ public class TempTest {
         List<User> userList = Arrays.asList(new User(2),new User(3),new User(1));
         Collections.sort(userList);
         userList.forEach(user -> System.out.println(user.getId()));
-
+        userList.sort(new Comparator<User>() {
+            @Override
+            public int compare(User o1, User o2) {
+                return o2.getId() - o1.getId();
+            }
+        });
+        userList.forEach(user -> System.out.println(user.getId()));
     }
 }
 
@@ -46,5 +53,13 @@ class User implements Comparable<User> {
     @Override
     public int compareTo(User o) {
         return this.id - o.id;
+    }
+}
+
+class UserComparator implements Comparator<User> {
+
+    @Override
+    public int compare(User o1, User o2) {
+        return o2.getId() - o1.getId();
     }
 }
