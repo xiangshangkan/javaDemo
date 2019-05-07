@@ -1,4 +1,9 @@
+package thinkSome.数组操作相关;
+
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 
 /**
  * @ClassName TempTest
@@ -7,11 +12,19 @@ import java.util.Comparator;
  * @Date 2019/4/28 16:54
  * @Version 1.0
  */
-public class TempTest {
+public class SortListTest {
 
     public static void main(String[] args) {
-        String some = "1,2,3,4,5,,,,,";
-        System.out.println(some.split(",").length);
+        List<User> userList = Arrays.asList(new User(2),new User(3),new User(1));
+        Collections.sort(userList);
+        userList.forEach(user -> System.out.println(user.getId()));
+        userList.sort(new Comparator<User>() {
+            @Override
+            public int compare(User o1, User o2) {
+                return o2.getId() - o1.getId();
+            }
+        });
+        userList.forEach(user -> System.out.println(user.getId()));
     }
 }
 
