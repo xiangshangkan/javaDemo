@@ -1,0 +1,30 @@
+package designPattern.behavioralPattern.visitorPattern;
+
+/**
+ * @ClassName ComputerPartDisplayVisitor
+ * @Description TODO
+ * @Author zhouhui
+ * @Date 2019/3/8 11:52
+ * @Version 1.0
+ */
+public class ComputerPartDisplayVisitor implements ComputerPartVisitor {
+    @Override
+    public void visit(Computer computer) {
+        System.out.println("Displaying Computer.");
+    }
+
+    @Override
+    public void visit(Mouse mouse) {
+        System.out.println("Displaying Mouse.");
+    }
+
+    @Override
+    public void visit(Keyboard keyboard) {
+        System.out.println("DisPlaying Keyboard.");
+    }
+
+    @Override
+    public void visit(Monitor monitor) {
+        System.out.println("Displaying Monitor.");
+    }
+}

@@ -15,7 +15,7 @@ public class LazySingletonPattern {
 
     public static LazySingletonPattern getInstance(){
         if(null == instance){
-            return new LazySingletonPattern();
+            instance = new LazySingletonPattern();
         }
         return instance;
     }

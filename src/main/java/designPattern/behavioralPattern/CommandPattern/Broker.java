@@ -14,7 +14,7 @@ public class Broker {
     }
     //执行动作或命令
     public void placeOrders(){
-        for(Order order : orderList){
+        for(Order order : orderList) {
             order.execute();
         }
         orderList.clear();

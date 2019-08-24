@@ -13,7 +13,7 @@ public class LazySynchPattern {
 
     public static synchronized LazySynchPattern getInstance(){
         if(null == instance){
-            return new LazySynchPattern();
+            instance = new LazySynchPattern();
         }
         return null;
     }
