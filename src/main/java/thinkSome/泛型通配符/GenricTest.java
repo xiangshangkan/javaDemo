@@ -9,18 +9,7 @@ import java.util.List;
  */
 public class GenricTest {
     public static void main(String[] args){
-        List<? extends Self> test1 = new ArrayList<>();
-        List<? super Self> test2 = new ArrayList<>();
-        List<?> test3 = new ArrayList<>();
-       /* test1.add(new Super());
-        test1.add(new Self());
-        test1.add(new Son());
-        test2.add(new Super());
-        test2.add(new Self());
-        test2.add(new Son());
-        test3.add(new Super());
-        test3.add(new Self());
-        test3.add(new Son());*/
+        System.out.println("fdsfdsfdsfds");
     }
 }
 
