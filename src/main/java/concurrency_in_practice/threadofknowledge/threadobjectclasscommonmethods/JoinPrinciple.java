@@ -20,6 +20,10 @@ public class JoinPrinciple {
         thread1.start();
         System.out.println("开始等待子线程运行完毕");
         thread1.join();
+        //以下为thread1.join的等价代码,子线程执行完成后会唤醒线程
+        /*synchronized (thread1) {
+            thread1.wait();
+        }*/
         System.out.println("所有子线程执行完毕！");
     }
 }
