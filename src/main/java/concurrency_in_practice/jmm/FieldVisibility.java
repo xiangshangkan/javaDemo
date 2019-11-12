@@ -43,5 +43,6 @@ public class FieldVisibility {
 
     private void print() {
         System.out.println("b = " + b +"；a = " + a);
+
     }
 }

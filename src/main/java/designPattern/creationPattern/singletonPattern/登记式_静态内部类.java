@@ -16,10 +16,16 @@ public class 登记式_静态内部类 {
         private static final 登记式_静态内部类 instance = new 登记式_静态内部类();
     }
 
-    private 登记式_静态内部类(){}
+    private 登记式_静态内部类(){
+        System.out.println("外部类初始化");
+    }
 
     public static 登记式_静态内部类 getInstance(){
         return  SingleHolder.instance;
+    }
+
+    public static void print(){
+        System.out.println("fghjdssfkjsdhfjk");
     }
 
     public static  void main(String[] args){
