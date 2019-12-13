@@ -18,12 +18,12 @@ public class SortListTest {
         List<User> userList = Arrays.asList(new User(2),new User(3),new User(1));
         Collections.sort(userList);
         userList.forEach(user -> System.out.println(user.getId()));
-        userList.sort(new Comparator<User>() {
-            @Override
-            public int compare(User o1, User o2) {
-                return o2.getId() - o1.getId();
-            }
-        });
+
+
+        userList.sort((User o1, User o2)->o2.getId() - o1.getId());
+        userList.forEach(user -> System.out.println(user.getId()));
+
+        userList.sort(new UserComparator());
         userList.forEach(user -> System.out.println(user.getId()));
     }
 }
@@ -62,6 +62,6 @@ class UserComparator implements Comparator<User> {
 
     @Override
     public int compare(User o1, User o2) {
-        return o2.getId() - o1.getId();
+        return o1.getId() - o2.getId();
     }
 }
