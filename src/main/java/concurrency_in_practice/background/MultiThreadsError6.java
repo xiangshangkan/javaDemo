@@ -1,6 +1,5 @@
 package concurrency_in_practice.background;
 
-import com.microsoft.schemas.office.office.STInsetMode;
 
 import java.util.HashMap;
 import java.util.Map;

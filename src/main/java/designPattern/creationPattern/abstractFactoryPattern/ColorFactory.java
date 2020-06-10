@@ -1,6 +1,8 @@
 package designPattern.creationPattern.abstractFactoryPattern;
 
 public class ColorFactory extends AbstractFactory {
+
+
     @Override
     Shape getShape(String shapeType) {
         return null;

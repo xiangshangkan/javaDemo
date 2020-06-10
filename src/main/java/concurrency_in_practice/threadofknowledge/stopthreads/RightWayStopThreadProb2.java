@@ -18,12 +18,11 @@ public class RightWayStopThreadProb2 implements Runnable{
             thrInMethd();
         }
     }
-
     private void thrInMethd() {
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
-            //
+            //捕获异常，重新中断标志
             Thread.currentThread().interrupt();
             e.printStackTrace();
         }

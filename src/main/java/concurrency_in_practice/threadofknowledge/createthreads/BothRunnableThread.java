@@ -14,7 +14,7 @@ public class BothRunnableThread {
         }){
             @Override
             public void run() {
-                super.run();
+               /* super.run();*/
                 System.out.println("我来自Thread");
             }
         }.start();

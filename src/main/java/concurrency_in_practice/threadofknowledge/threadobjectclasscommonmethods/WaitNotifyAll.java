@@ -34,8 +34,9 @@ public class WaitNotifyAll implements Runnable{
             @Override
             public void run() {
                 synchronized (resourceA) {
-                    //resourceA.notify();
-                    resourceA.notifyAll();
+                    resourceA.notify();
+                    resourceA.notify();
+                    //resourceA.notifyAll();
                     System.out.println("ThreadC notified.");
                 }
             }

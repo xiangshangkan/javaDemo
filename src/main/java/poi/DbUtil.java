@@ -8,7 +8,7 @@ import java.sql.*;
  */
 public class DbUtil {
 
-    private static String jdbcDriver = "om.mysql.jdbc.Driver";
+    private static String jdbcDriver = "com.mysql.jdbc.Driver";
     private static String jdbcUrl = "jdbc:mysql://localhost:3306/framtest?characterEncoding=utf-8";
     private static String jdbcPassword = "root";
     private static String jdbcUserName = "root";
@@ -19,6 +19,7 @@ public class DbUtil {
 
     public static Connection getConn() {
         try {
+            Driver dd = null;
             Class.forName(jdbcDriver);
             Connection connection = DriverManager.getConnection(jdbcUrl,jdbcUserName,jdbcPassword);
             return  connection;
@@ -30,6 +31,11 @@ public class DbUtil {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public static void main(String args[]) {
+      Connection connection =  DbUtil.getConn();
+      System.out.println("连接成功");
     }
 
 
