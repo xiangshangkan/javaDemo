@@ -2,7 +2,7 @@ package concurrency_in_practice.threadofknowledge.threadobjectclasscommonmethods
 
 /**
  *  展示wait和notify的基本用法
- *  1、研究代码执行顺序
+ *  1、研究代码执行顺序,2、wait会释放锁
 */
 public class Wait {
     public static Object object = new Object();
@@ -23,7 +23,6 @@ public class Wait {
             }
         }
     }
-
     static class Thread2 extends Thread {
 
         @Override
@@ -34,7 +33,6 @@ public class Wait {
             }
         }
     }
-
     public static void main(String[] args) throws InterruptedException {
         Thread1 thread1 = new Thread1();
         Thread2 thread2 = new Thread2();

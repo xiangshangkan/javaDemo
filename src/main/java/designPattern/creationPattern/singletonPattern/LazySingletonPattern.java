@@ -6,7 +6,6 @@ package designPattern.creationPattern.singletonPattern;
  * @Date: 2018/9/13 08:51
  */
 public class LazySingletonPattern {
-
     private static LazySingletonPattern instance =null;
 
     /*将构造函数隐藏，使类外无法通过new的方式创建该对象*/

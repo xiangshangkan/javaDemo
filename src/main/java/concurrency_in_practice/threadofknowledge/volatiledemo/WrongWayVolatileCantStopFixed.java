@@ -45,7 +45,7 @@ public class WrongWayVolatileCantStopFixed {
             try {
                 while (num <= 10000 && !Thread.currentThread().isInterrupted()) {
                     if(num%100 == 0) {
-                        //这里阻塞，不会判断while条件
+                        //这里阻塞，不会判断while条件，但在阻塞后会响应Thread.interrupted的中断
                         storage.put(num);
                         System.out.println(num+"是100的倍数。被放到仓库了");
                     }

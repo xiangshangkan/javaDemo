@@ -9,7 +9,7 @@ package designPattern.creationPattern.singletonPattern;
  */
 public class DCLSingletonPattern {
 
-    private static volatile  DCLSingletonPattern instance = new DCLSingletonPattern();
+    private static volatile  DCLSingletonPattern instance;
 
     public void show(){
         System.out.println("创建一个对象");
