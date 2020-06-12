@@ -1,7 +1,7 @@
 package leetcode.datastructure.queue;
 
 
-import java.util.*;
+
 
 /**
  * @Description: ${description}
@@ -12,30 +12,20 @@ import java.util.*;
 
  public class Solution {
 
-    public int reverse(int x) {
-
-        int max = (1<<32);
-        int min = - max;
-
-        String str = String.valueOf(x);
-        int length = str.length();
-
-        char first = str.charAt(0);
-        StringBuilder str2 = new StringBuilder();
-        for (int i = length; i > length; i--) {
-            if (str2.length() == 0 && str.charAt(i) == '0') {
-                continue;
-            }
-            str2.append(str.charAt(i));
+    public static boolean isPalindrome(int x) {
+        if (x < 0) {
+            return false;
         }
-        str = first + str2.toString();
-        int res = Integer.valueOf(str);
-
-        return (res < min || res > max) ? 0 : res;
+        char[] chars = String.valueOf(x).toCharArray();
+        for (int i =0,j=chars.length-1;i <= j;i++,j--) {
+            if (chars[i] != chars[j]) {
+                return false;
+            }
+        }
+        return true;
     }
 
-    public static void main(String[] args) {
-        System.out.println( 1<<31 );
-        System.out.println((1<<31));
+    public static void main(String args[]) {
+        System.out.println(Solution.isPalindrome(-10));
     }
 }

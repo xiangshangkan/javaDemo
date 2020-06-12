@@ -56,10 +56,11 @@
             <artifactId>testng</artifactId>
             <version>6.9.13.6</version>
         </dependency>
+        <!-- 第三方哈希算法和加密算法库 -->
         <dependency>
-            <groupId>com.github.pagehelper</groupId>
-            <artifactId>pagehelper</artifactId>
-            <version>5.1.2</version>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk15on</artifactId>
+            <version>1.48</version>
         </dependency>
     </dependencies>
 </project>
