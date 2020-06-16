@@ -1,4 +1,4 @@
-package netty;
+package netty.discardOrecho;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;

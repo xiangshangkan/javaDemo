@@ -1,4 +1,4 @@
-package netty;
+package netty.discardOrecho;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;

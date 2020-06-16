@@ -23,7 +23,6 @@ public class SimpleDemo{
         StringBuilder ssdfd = new StringBuilder();
         Class c = Class.forName("String");
         ClassLoader dfd = null;
-
     }
 
 

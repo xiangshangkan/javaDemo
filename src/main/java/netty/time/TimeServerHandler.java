@@ -1,4 +1,4 @@
-package netty;
+package netty.time;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelFuture;
@@ -21,6 +21,7 @@ public class TimeServerHandler extends ChannelInboundHandlerAdapter{
 
         final ChannelFuture f = ctx.writeAndFlush(time);
         f.addListener(new ChannelFutureListener() {
+            @Override
             public void operationComplete(ChannelFuture future) throws Exception {
                 assert  f == future;
                 ctx.close();

@@ -1,4 +1,4 @@
-package netty;
+package netty.discardOrecho;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
@@ -24,7 +24,7 @@ public class DiscardServer {
     }
 
     public void run()throws  Exception{
-        //用以接收过来的连接
+        //用以接收客户端请求连接
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         //一旦bossGroup接收到连接并且注册接收连接给workerGroup,workerGroup负责处理连接数据传输
         EventLoopGroup workerGroup = new NioEventLoopGroup();
@@ -40,7 +40,7 @@ public class DiscardServer {
                         @Override
                         protected void initChannel(SocketChannel sc) throws Exception {
                             //添加自定义处理器
-                            sc.pipeline().addLast(new TimeServerHandler());
+                            sc.pipeline().addLast(new EchoServerHandler());
                         }
                     })
                     .option(ChannelOption.SO_BACKLOG,128)

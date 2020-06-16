@@ -1,4 +1,4 @@
-package netty.client;
+package netty.time.upgrade;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
@@ -9,6 +9,7 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 
+
 /**
  * @Description: ${description}
  * @Author: Zohar
@@ -18,8 +19,8 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 public class TimeClient {
 
     public static void main(String[] args) throws Exception{
-        String host = args[0];
-        int port = Integer .parseInt(args[1]);
+        //String host = args[0];
+        //int port = Integer .parseInt(args[1]);
         EventLoopGroup workerGroup = new NioEventLoopGroup();
 
         try {
@@ -31,12 +32,12 @@ public class TimeClient {
 
                 @Override
                 protected void initChannel(SocketChannel ch) throws Exception {
-                    ch.pipeline().addLast(new TimeClientHandler());
+                    ch.pipeline().addLast(new TimeDecoder(),new TimeClientHandler());
                 }
             });
 
             //开启客户端
-            ChannelFuture f = b.connect(host,port).sync();
+            ChannelFuture f = b.connect("localhost",8080).sync();
             //等待直到连接关闭
             f.channel().closeFuture().sync();
 
