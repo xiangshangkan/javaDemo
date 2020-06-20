@@ -13,12 +13,13 @@ public class ByteBufferTest {
         buffer.put(a);
         buffer.put(b);
         buffer.put(c);
-        System.out.println("加入三个元素后：position = " + buffer.position() + "，limit = " + buffer.limit());
+        System.out.println("加入三个元素后：position = " + buffer.position() + "，limit = " + buffer.limit() + ",capacity = " +buffer.capacity());
         buffer.flip();
-        System.out.println("执行flip()方法后：position = " + buffer.position() + "，limit = " + buffer.limit());
-        System.out.println("取出一个值：value = " + buffer.get() + "，position = " + buffer.position() + "，limit = " + buffer.limit());
+        System.out.println("执行flip()方法后：position = " + buffer.position() + "，limit = " + buffer.limit()+ ",capacity = " +buffer.capacity());
+        System.out.println("取出一个值：value = " + buffer.get() + "，position = " + buffer.position() + "，limit = " + buffer.limit()+ ",capacity = " +buffer.capacity());
         buffer.clear();
-        System.out.println("执行clear()方法后：position = " + buffer.position() + "，limit = " + buffer.limit());
+         buffer.compact();
+        System.out.println("执行clear()方法后：position = " + buffer.position() + "，limit = " + buffer.limit()+ ",capacity = " +buffer.capacity());
 
     }
 }
