@@ -43,7 +43,6 @@ public class HttpTest {
             out = new PrintWriter(conn.getOutputStream());
             //发送请求参数
             out.print("teacherName=zhouhui");
-            //out.print("uid=" + uid +"&status=" + status + "&gender=" + gender + "&channel=" + u.getChannel());
             //flush输出流的缓冲
             out.flush();
             in = new BufferedReader(new InputStreamReader(conn.getInputStream(),"UTF-8"));
