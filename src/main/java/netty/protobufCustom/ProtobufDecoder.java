@@ -3,6 +3,7 @@ package netty.protobufCustom;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ByteToMessageDecoder;
+import netty.protobuf.protocol.MsgProtos;
 
 import java.util.List;
 
@@ -40,5 +41,27 @@ public class ProtobufDecoder extends ByteToMessageDecoder{
             in.resetReaderIndex();
             return;
         }
+
+        //省略：读取魔数、版本号等其他的数据
+        //省略：读取内容
+        byte[] array;
+        if (in.hasArray()) {
+            //堆缓存,线程复制可读部分
+            ByteBuf slice = in.slice();
+            array = slice.array();
+        } else {
+            //直接缓存
+            array = new byte[length];
+            in.readBytes(array,0,length);
+        }
+
+        //字节转成 ProtoBuf 的 POJO 对象
+        MsgProtos.Msg outMsg = MsgProtos.Msg.parseFrom(array);
+        if (outMsg != null) {
+            //获取业务消息
+            list.add(outMsg);
+        }
+
+
     }
 }
