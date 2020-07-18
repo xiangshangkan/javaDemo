@@ -13,29 +13,9 @@ import java.util.List;
 public class Demo {
 
     public static  void main(String[] args) {
-        List<Integer> lst2 = new ArrayList<>();
-        List<Integer> lst = new ArrayList<>();
-        lst.add(1);
-        lst.add(2);
-        lst.add(3);
-        lst.parallelStream().forEach(mo->{
-            if (mo == 2) {
-                run();
-            }
-            System.out.println(mo);
-            lst2.add(mo);
-        });
-        lst2.forEach(System.out::println);
-    }
-
-    public static void run(){
-        for (int i = 0; i < 10000; i++) {
-
+        char[] chars = new char[10];
+        for (int i = 0; i < chars.length; i++) {
+            System.out.println(chars[i]);
         }
     }
-
-
-
-
-
 }
