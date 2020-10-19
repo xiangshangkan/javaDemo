@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.concurrent.*;
 
 /**
  * @ProjectName: javaDemo
@@ -12,10 +11,21 @@ import java.util.List;
  */
 public class Demo {
 
-    public static  void main(String[] args) {
-        char[] chars = new char[10];
-        for (int i = 0; i < chars.length; i++) {
-            System.out.println(chars[i]);
+    private static ExecutorService executorService = Executors.newCachedThreadPool();
+
+
+
+}
+
+class Task implements Runnable{
+
+    @Override
+    public void run() {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
+        System.out.println(Thread.currentThread().getName());
     }
 }
