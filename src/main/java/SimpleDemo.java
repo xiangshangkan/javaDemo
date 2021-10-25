@@ -14,15 +14,14 @@ public class SimpleDemo{
 
     public static void main(String[] args) throws ParseException, ClassNotFoundException {
 
-        Scanner in = new Scanner(System.in);
-        String str = in.next();
-        char[] chars = str.toCharArray();
-        System.out.println(chars[0] == '*');
+       /* 当字符串只包含分隔符时，返回数组没有元素；
+        当字符串不包含分隔符时，返回数组只包含一个元素（该字符串本身）；
+        字符串最尾部出现的分隔符可以看成不存在，不影响字符串的分隔；
+        字符串最前端出现的分隔符将分隔出一个空字符串以及剩下的部分的正常分隔；*/
 
-        ConcurrentHashMap map = new ConcurrentHashMap();
-        StringBuilder ssdfd = new StringBuilder();
-        Class c = Class.forName("String");
-        ClassLoader dfd = null;
+        String strs = "";
+        String[] ls = strs.split("_");
+        System.out.print(ls.length);
     }
 
 

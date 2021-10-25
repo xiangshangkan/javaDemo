@@ -11,8 +11,6 @@ public abstract class Shape implements Cloneable{
 
     protected  String type;
 
-    abstract  void draw();
-
     public String getId() {
         return id;
     }
@@ -28,6 +26,8 @@ public abstract class Shape implements Cloneable{
     public void setType(String type) {
         this.type = type;
     }
+
+    abstract  void draw();
 
     @Override
     public Object clone(){

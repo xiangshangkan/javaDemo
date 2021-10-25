@@ -18,12 +18,7 @@ public class ShapeCache {
     }
 
     /**
-    * @Description   添加缓存
-    * @author      作者姓名
-    * @param
-    * @return
-    * @exception
-    * @date        2018/9/12 16:28
+    * 添加缓存
     */
     public static void loadCache(){
         Square square = new Square();

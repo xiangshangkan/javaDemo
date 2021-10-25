@@ -12,28 +12,16 @@ public class Meal {
 
     //套餐内食物集合
     private List<Item> itemList = new ArrayList<>();
-
     /**
-    * @Description  定义套餐内食物
-    * @author      作者姓名
-    * @param
-    * @return
-    * @exception
-    * @date        2018/9/12 11:18
+    * 向套餐内添加食物
     */
     public void addItem(Item item){
         if(null != item){
             itemList.add(item);
         }
     }
-
     /**
-    * @Description   计算套餐总价
-    * @author      作者姓名
-    * @param
-    * @return
-    * @exception
-    * @date        2018/9/12 11:19
+    * 计算套餐总价
     */
     public float totalPrice(){
         float total = 0.0f;
@@ -44,15 +32,9 @@ public class Meal {
         }
         return total;
     }
-
     /**
-    * @Description   套餐展示
-    * @author      作者姓名
-    * @param
-    * @return
-    * @exception
-    * @date        2018/9/12 11:19
-    */
+     * 套餐展示
+     */
     public void showMeal(){
         if(null != itemList && itemList.size() >0){
             for (Item item:itemList) {
@@ -61,6 +43,4 @@ public class Meal {
             System.out.println("总价：" + totalPrice());
         }
     }
-
-
 }

@@ -18,9 +18,11 @@ public class DCLSingletonPattern {
     private DCLSingletonPattern(){}
 
     public static  DCLSingletonPattern getInstance(){
-        synchronized (DCLSingletonPattern.class){
-            if(null == instance){
-                instance = new DCLSingletonPattern() ;
+        if (null == instance) {
+            synchronized (DCLSingletonPattern.class){
+                if(null == instance){
+                    instance = new DCLSingletonPattern() ;
+                }
             }
         }
         return instance;

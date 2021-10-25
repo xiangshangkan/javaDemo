@@ -24,10 +24,6 @@ public class 登记式_静态内部类 {
         return  SingleHolder.instance;
     }
 
-    public static void print(){
-        System.out.println("fghjdssfkjsdhfjk");
-    }
-
     public static  void main(String[] args){
         登记式_静态内部类 instance = 登记式_静态内部类.getInstance();
         instance.show();

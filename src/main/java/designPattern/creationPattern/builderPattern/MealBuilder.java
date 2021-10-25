@@ -9,11 +9,6 @@ public class MealBuilder {
 
     /**
     * @Description   素食套餐
-    * @author      作者姓名
-    * @param
-    * @return
-    * @exception
-    * @date        2018/9/12 11:28
     */
     public Meal prepareVegMeal(){
         Meal meal = new Meal();
@@ -26,11 +21,6 @@ public class MealBuilder {
 
     /**
     * @Description   肉食套餐
-    * @author      作者姓名
-    * @param
-    * @return
-    * @exception
-    * @date        2018/9/12 11:30
     */
     public  Meal prepareMeetMeal(){
         Meal meal = new Meal();

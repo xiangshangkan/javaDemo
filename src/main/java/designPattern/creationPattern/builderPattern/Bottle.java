@@ -1,7 +1,7 @@
 package designPattern.creationPattern.builderPattern;
 
 /**
-* @Description:    创建一个实现食物包装的饼子类
+* @Description:    创建一个实现食物包装的类
 * @Author:         zhouhui
 * @CreateDate:
 * @Version:        1.0
